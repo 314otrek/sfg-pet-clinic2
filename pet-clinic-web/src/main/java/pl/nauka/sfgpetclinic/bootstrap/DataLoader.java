@@ -6,8 +6,6 @@ import pl.nauka.sfgpetclinic.model.Owner;
 import pl.nauka.sfgpetclinic.model.Vet;
 import pl.nauka.sfgpetclinic.services.OwnerService;
 import pl.nauka.sfgpetclinic.services.VetService;
-import pl.nauka.sfgpetclinic.services.map.OwnerServiceMap;
-import pl.nauka.sfgpetclinic.services.map.VetServiceMap;
 
 @Component()
 public class DataLoader implements CommandLineRunner {
@@ -16,10 +14,9 @@ public class DataLoader implements CommandLineRunner {
     private final VetService vetService;
 
 
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
-
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
     @Override
     public void run(String... args) throws Exception {
