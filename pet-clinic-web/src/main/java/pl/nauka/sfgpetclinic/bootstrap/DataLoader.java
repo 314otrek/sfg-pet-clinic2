@@ -7,7 +7,7 @@ import pl.nauka.sfgpetclinic.model.Vet;
 import pl.nauka.sfgpetclinic.services.OwnerService;
 import pl.nauka.sfgpetclinic.services.VetService;
 
-@Component()
+@Component
 public class DataLoader implements CommandLineRunner {
 
     public final OwnerService ownerService;
