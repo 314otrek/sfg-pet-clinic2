@@ -9,4 +9,9 @@ public class IndexController {
     public String index(){
         return "index.html";
     }
+
+    @RequestMapping({"/owners/find","/vets.html", "oups"})
+    public String notImplemented(){
+        return "notImplemented.html";
+    }
 }
