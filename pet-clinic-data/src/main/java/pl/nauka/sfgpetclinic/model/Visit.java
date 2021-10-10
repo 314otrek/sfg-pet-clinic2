@@ -1,11 +1,20 @@
 package pl.nauka.sfgpetclinic.model;
 
+import javax.persistence.*;
 import java.time.LocalDate;
 
+@Entity
+@Table(name = "visits")
 public class Visit {
 
+    @Column(name = "date")
     private LocalDate localDate;
+
+    @ManyToOne
     private String description;
+
+    @ManyToOne
+    @JoinColumn(name = "pet_id")
     private Pet pet;
 
     public LocalDate getLocalDate() {
