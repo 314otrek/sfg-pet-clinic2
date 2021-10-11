@@ -7,6 +7,7 @@ import pl.nauka.sfgpetclinic.services.*;
 
 import java.time.LocalDate;
 
+
 @Component
 public class DataLoader implements CommandLineRunner {
 
@@ -67,7 +68,7 @@ public class DataLoader implements CommandLineRunner {
 
         Pet mikesPEt = new Pet();
         mikesPEt.setPetType(savedDogPetType);
-        mikesPEt.setLocalDate(LocalDate.now());
+        mikesPEt.setBirthDate(LocalDate.now());
         mikesPEt.setOwner(owner1);
         mikesPEt.setName("Rosco");
         owner1.getPets().add(mikesPEt);
@@ -84,7 +85,7 @@ public class DataLoader implements CommandLineRunner {
         Pet Fionascat = new Pet();
         Fionascat.setName("fiona");
         Fionascat.setOwner(owner2);
-        Fionascat.setLocalDate(LocalDate.now());
+        Fionascat.setBirthDate(LocalDate.now());
         Fionascat.setPetType(savedCatPetType);
         owner2.getPets().add(Fionascat);
 
